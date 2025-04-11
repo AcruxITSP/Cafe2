@@ -1,0 +1,149 @@
+:root {
+    --main: rgb(161, 60, 35);
+    --accent: rgb(240, 144, 140);
+    --background: rgb(252, 185, 164);
+    --nav-margin: 10px;
+    --nav-link-font-size: 14px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}
+
+/* Header */
+header {
+    background-color: var(--main);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: fit-content;
+    padding: 0.5rem;
+}
+
+header > h1 {
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+nav > ul > li {
+    margin-left: var(--nav-margin);
+}
+
+nav > ul > li:last-child {
+    margin-right: var(--nav-margin);
+}
+
+nav > ul > li::marker {
+    color: white;
+    content: "👉   ";
+}
+
+nav > ul > li:hover::marker {
+    content: "👉";
+}
+
+nav > ul > li > a{
+    color: white;
+}
+
+/* Main */
+main {
+    margin: 2rem;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+#tipos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#video {
+    display: flex;
+    justify-content: center;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--background);
+    padding: 1rem;
+    width: 25rem;
+    border-radius: 1rem;
+}
+
+.card > img {
+    width: 90%;
+    height: 15rem;
+}
+
+.card > p {
+    width: 90%;
+    text-align: center;
+    margin-top: 1rem;
+    height: 10rem;
+}
+
+/* OTHER */
+a {
+    transition-duration: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--nav-link-font-size);
+}
+
+a:hover {
+    font-weight: bolder;
+    color: var(--accent);
+    font-size: calc(var(--nav-link-font-size) + 3px);
+}
+
+/* Media Queries */
+@media (max-width: 976px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    header > h1 {
+        font-size: 1.3rem;
+    }
+
+    nav > ul {
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    nav > ul > li {
+        margin: 0 5px;
+    }
+}
